@@ -1,0 +1,33 @@
+/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_C_COMPILER=/bin/clangd-12 -DCMAKE_CXX_COMPILER=/bin/clangd-12 -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/balint/CLionProjects/iranyAZur
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /bin/clangd-12
+-- Check for working C compiler: /bin/clangd-12 - broken
+CMake Error at /home/balint/cLION/clion-2021.2.2/bin/cmake/linux/share/cmake-3.20/Modules/CMakeTestCCompiler.cmake:66 (message):
+  The C compiler
+
+    "/bin/clangd-12"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_760f6/fast && CMake Error: Unknown argument -f
+    CMake Error: Run 'cmake --help' for all supported options.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeError.log".
