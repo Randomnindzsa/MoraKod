@@ -3,7 +3,7 @@
 
 using namespace std;
 
-
+// elvégzi a mátrixszorzást Hammming-kód generátormátrixával
 bitset<7> matrix(bitset<4> &c_chunk){
 
     bitset<7> kodolt;
@@ -12,7 +12,7 @@ bitset<7> matrix(bitset<4> &c_chunk){
         kodolt[i+3] = c_chunk[i];
     }
 
-    /*  
+    /*
      * e: 1110
      * f: 1101
      * g: 0111
@@ -30,7 +30,7 @@ bitset<7> matrix(bitset<4> &c_chunk){
     return kodolt;
 }
 
-
+// megtalálja a bit indexét a 256-os bitsorban.
 unsigned index_finder(unsigned &bit_out_index){
 
     /*Kód epic_list legenárálásához (jobb hard code-ólva?)
@@ -65,15 +65,15 @@ unsigned index_finder(unsigned &bit_out_index){
     return epic_list[bit_out_index];
 }
 
-
+//bekéri az eredeti 144-es bitsort és visszadja a 256-os kódolt bitsort
 bitset<256> hamming(bitset<144> &bit_in){
 
     bitset<256> bit_out;
 
-    bit_out.set(255, 1);
-    bit_out.set(254, 1);
-    bit_out.set(253, 1);
-    bit_out.set(252, 1);
+    bit_out.set(255, true);
+    bit_out.set(254, true);
+    bit_out.set(253, true);
+    bit_out.set(252, true);
 
 
     bitset<4> current_chunk;
@@ -87,8 +87,8 @@ bitset<256> hamming(bitset<144> &bit_in){
         if(chunk_index == 4){
             bitset<7> kodolt = matrix(current_chunk);
             cout << kodolt << endl;
-            for(int i = 0; i < 7; i++){
-                bit_out.set(index_finder(bit_out_index), kodolt[i]);
+            for(int j = 0; j < 7; j++){
+                bit_out.set(index_finder(bit_out_index), kodolt[j]);
                 bit_out_index++;
             }
             chunk_index = 0;
@@ -101,13 +101,23 @@ bitset<256> hamming(bitset<144> &bit_in){
 
 
 
+
 int main() {
-    
+
     bitset<144> bit_in(string("001010101000001101111000111101011100111010101000000010110010001110101010001101111000000010000100011000110000001000010000101010100110100110111010"));
 
+    /*
+    bitset<144> bit_in;
+
+    bool bit;
+    int index = 0;
+    while (std::cin >> bit) {
+
+    }
+    */
+
+
     cout << hamming(bit_in) << endl;
-
-
 
     return 0;
 }
