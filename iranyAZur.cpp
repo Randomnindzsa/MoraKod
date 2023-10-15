@@ -86,9 +86,8 @@ bitset<256> hamming(bitset<144> &bit_in){
 
         if(chunk_index == 4){
             bitset<7> kodolt = matrix(current_chunk);
-            cout << kodolt << endl;
             for(int j = 0; j < 7; j++){
-                bit_out.set(index_finder(bit_out_index), kodolt[j]);
+                bit_out.set(bit_out_index, kodolt[j]);
                 bit_out_index++;
             }
             chunk_index = 0;
@@ -96,10 +95,44 @@ bitset<256> hamming(bitset<144> &bit_in){
 
     }
 
-    return bit_out;
+
+    // ez a rész alakítja át a bitsort továbbítandó alakra.
+    // szerintem ezt majd kiszedem és implementálom egyből az előző for loop-ban
+    // (csak ez még nem sikerült)
+    bitset<256> tmp_bit;
+    for(unsigned int i = 0; i < 256; i++){
+        tmp_bit[i] = bit_out[index_finder(i)];
+    }
+
+    return tmp_bit;
 }
 
 
+
+// dekódolja a bitset és visszadja az eredeti alakot
+bitset<144> dekodolo(bitset<256> &bit_out){
+    bitset<256> un_bit;
+    bitset<144> de_bit;
+
+    for(unsigned i = 0; i < 256; i++){
+        un_bit[i] = bit_out[index_finder(i)];
+    }
+
+    unsigned index = 3;
+    unsigned counter = 0;
+    for(int i = 0; i < 144; i++){
+        de_bit[i] = un_bit[index++];
+        counter++;
+        if(counter == 4){
+            index += 3;
+            counter = 0;
+        }
+    }
+
+
+    return de_bit;
+
+}
 
 
 int main() {
@@ -117,7 +150,12 @@ int main() {
     */
 
 
-    cout << hamming(bit_in) << endl;
+cout << hamming(bit_in) << endl;
+
+bitset<256> res_bit = hamming(bit_in);
+
+cout << dekodolo(res_bit) << endl;
+
 
     return 0;
 }
