@@ -82,6 +82,8 @@ bitset<256> hamming(bitset<144> &bit_in){
 
     for(int i = 0; i < 144; i++) {
 
+
+
         current_chunk[chunk_index++] = bit_in[i];
 
         if(chunk_index == 4){
@@ -109,14 +111,13 @@ bitset<256> hamming(bitset<144> &bit_in){
 
 
 
-// dekódolja a bitset és visszadja az eredeti alakot
-bitset<144> dekodolo(bitset<256> &bit_out){
+
+// visszaállítja az eredeti bitsort  hibajavítás nélkül
+bitset<144> descramble(bitset<256> &bit_out){
     bitset<256> un_bit;
     bitset<144> de_bit;
 
-    for(unsigned i = 0; i < 256; i++){
-        un_bit[i] = bit_out[index_finder(i)];
-    }
+
 
     unsigned index = 3;
     unsigned counter = 0;
@@ -129,9 +130,146 @@ bitset<144> dekodolo(bitset<256> &bit_out){
         }
     }
 
-
     return de_bit;
 
+}
+
+
+bitset<7> javitas(bitset<7> &c_bit){
+
+    /* így hoztam létre a kod_szavak-at.
+
+    bitset<64>all_chunks = 0b0000000100100100100000110110110010101001010111101101101101111111;
+
+    bitset<112>beszorzott_chunks;
+
+    bitset<4> tmp_eredmeny;
+    bitset<7> tmp_append;
+    unsigned index = 0;
+    unsigned szorzott_index = 0;
+
+    for(int i = 0; i < 64; i++){
+        tmp_eredmeny[index] = all_chunks[i];
+        cout << "Az index: " << index << "az [i] darab " << all_chunks[i] << endl;
+        if(index == 3){
+            cout << tmp_eredmeny << endl;
+            cout << i << endl;
+            tmp_append = matrix(tmp_eredmeny);
+            cout << tmp_append << endl;
+            for(int j = 0; j < 7; j++){
+                beszorzott_chunks[szorzott_index] = tmp_append[j];
+                szorzott_index++;
+            }
+            index = -1;
+        }
+        index++;
+    }
+    */
+
+    //az összes lehetséges 4 chunkos kód szó Hamming-mátrix szorzatát tartalmazza. 7-es chunkok.
+    // a clion error-t jelez erre a deklarációra "Integer literal is too large." Viszont probléma nélkül lefoudol.
+    //bitset<112> kod_szavak = 0b0000000000101100101010100111100011000111100110010110000110100111001101010110011101001101010101100001110011111111;
+
+
+
+
+    bitset<112> kod_szavak(string("0000000000101100101010100111100011000111100110010110000110100111001101010110011101001101010101100001110011111111"));
+
+    // a különbség az adott bitsortól
+    unsigned diff = 8;
+    //leghansonlóbb chunk kezdő indexe
+    unsigned k_index = 0;
+
+    // hogy 7-esével legyenek vizsgálva chunkok
+    unsigned chunk_index = 0;
+
+    // a jelenleg vizsgált bitsor különbsége az adott bitsortól
+    unsigned c_diff = 0;
+
+    //cout << "ez c-bit" << c_bit << endl;
+
+
+    for(int i = 0; i < 112; i++){
+        if(c_bit[chunk_index] != kod_szavak[i]){
+            c_diff++;
+        }
+        chunk_index++;
+
+        if(chunk_index == 7){
+            if(c_diff == 0){
+                return c_bit;
+            }
+
+            if(c_diff < diff){
+                diff = c_diff;
+                k_index = i - 6;
+            }
+            c_diff = 0;
+            chunk_index = 0;
+        }
+    }
+
+    if(diff > 1){
+        cout << "its happening" << endl;
+        throw exception();
+    }
+
+    bitset<7> res_bit;
+    unsigned index = 0;
+    for(int i = k_index; i < k_index+7; i++){
+        res_bit[index++] = kod_szavak[i];
+    }
+
+    //cout << "ez a res_bit " <<  res_bit << endl;
+
+    return res_bit;
+
+}
+
+
+
+
+
+bitset<144> decode(bitset<256> &bit_out){
+    bitset<256> un_bit;
+
+    for(unsigned i = 0; i < 256; i++){
+        un_bit[i] = bit_out[index_finder(i)];
+    }
+
+    /*
+    for(int i = 0; i < 256; i++){
+        cout << un_bit[i];
+    }
+
+    cout << endl;
+    */
+
+    bitset<144> res_bit;
+    unsigned chunk_index = 0;
+    unsigned res_bit_index = 0;
+    bitset<7> javitando;
+    bitset<7> javitott;
+
+    for(int i = 0; i < 252; i++){
+        javitando[chunk_index] = un_bit[i];
+        chunk_index++;
+
+        if(chunk_index == 7){
+
+            javitott = javitas(javitando);
+            //cout << javitando << " " << javitott << endl;
+            chunk_index = 0;
+            for(int j = 3; j < 7; j++){
+                res_bit[res_bit_index] = javitott[j];
+                res_bit_index++;
+            }
+        }
+    }
+
+
+
+    return res_bit;
 }
 
 
@@ -139,22 +277,12 @@ int main() {
 
     bitset<144> bit_in(string("001010101000001101111000111101011100111010101000000010110010001110101010001101111000000010000100011000110000001000010000101010100110100110111010"));
 
-    /*
-    bitset<144> bit_in;
-
-    bool bit;
-    int index = 0;
-    while (std::cin >> bit) {
-
-    }
-    */
+    bitset<256> bit_out = hamming(bit_in);
 
 
-cout << hamming(bit_in) << endl;
+    bitset<144> decoded = decode(bit_out);
 
-bitset<256> res_bit = hamming(bit_in);
-
-cout << dekodolo(res_bit) << endl;
+    cout << decoded << endl;
 
 
     return 0;
