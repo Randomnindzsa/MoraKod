@@ -11,7 +11,6 @@ using namespace std;
 
 class Kodolo {
 public:
-    Kodolo(){}
 // elvégzi a mátrixszorzást Hammming-kód generátormátrixával
     bitset<7> matrix(bitset<4> &c_chunk) {
 

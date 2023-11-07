@@ -26,14 +26,20 @@ std::bitset<256> toro(std::bitset<256> bemenet, unsigned meret, unsigned honnan)
     int lepes = 50/meret;
     int esely = 50;
     for (unsigned int i = 0; i < meret*2+1; ++i) {
+        cout << to_string(esely) << endl;
         if(i==0){
           bemenet.flip(honnan);
-        }
-        if(i <= meret){
+          esely+=lepes;
+        }else if (i < meret){
             if(torik_e(esely)){
                 bemenet.flip(honnan+i);
             }
             esely+=lepes;
+        }else if(i == meret){
+            if(torik_e(esely)){
+                bemenet.flip(honnan+1);
+            }
+            esely-=lepes;
         }else if(i > meret){
             if(torik_e(esely)){
                 bemenet.flip(honnan+i);
@@ -55,7 +61,7 @@ int main(int argc, char* argv[]){
     {
         seglist.push_back(segment);
     }
-    for (int i = 1; i < 10; ++i) {
+    for (int i = 1; i < 3; ++i) {
         cout << to_string(i*2+1) << " méretű parabola zaj mintázása: " << endl;
         for (itr = seglist.begin(); itr < seglist.end(); itr++) {
             std::bitset<144> bevitel(*itr);
