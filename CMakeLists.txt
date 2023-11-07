@@ -3,4 +3,4 @@ project(untitled3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled3 iranyAZur.cpp listbool.cpp)
+add_executable(untitled3 teszt.cpp kodolo.h)

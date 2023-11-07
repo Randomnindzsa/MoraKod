@@ -230,251 +230,19 @@ clangd-12: Did you mean '--index=arm-arm-none-eabi'?
 clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
 
 
-Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags:  
-
-The output was:
-1
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -c 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-c'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -Aa 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-Aa'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -D__CLASSIC_C__ 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-D__CLASSIC_C__'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '--index=arm-arm-none-eabi'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags:  
-
-The output was:
-1
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -c 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-c'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -Aa 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-Aa'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -D__CLASSIC_C__ 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-D__CLASSIC_C__'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '--index=arm-arm-none-eabi'?
-clangd-12: Unknown command line argument 'CMakeCCompilerId.c'.  Try: '/bin/clangd-12 --help'
-
-
-Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the C compiler is IAR using "" terminated after 10 s due to timeout.Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags:  
-
-The output was:
-1
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -c 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-c'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--c++'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--ec++'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '--index=arm-arm-none-eabi'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags:  
-
-The output was:
-1
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: -c 
-
-The output was:
-1
-clangd-12: Unknown command line argument '-c'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--c++'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--ec++'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '-h'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: /bin/clangd-12 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-1
-clangd-12: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/bin/clangd-12 --help'
-clangd-12: Did you mean '--index=arm-arm-none-eabi'?
-clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/clangd-12 --help'
-
-
 Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Detecting C compiler ABI info failed to compile with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_97f82/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_1a089/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
 
 
 Determining if the C compiler works failed with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_92bcc/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_13949/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
@@ -712,18 +480,18 @@ clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/c
 
 
 Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Detecting C compiler ABI info failed to compile with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_5b914/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_d2b30/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
 
 
 Determining if the C compiler works failed with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_9f469/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_a158a/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
@@ -961,18 +729,18 @@ clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/c
 
 
 Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Detecting C compiler ABI info failed to compile with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_7df8a/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_96318/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
 
 
 Determining if the C compiler works failed with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_8fadc/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_d7ac3/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
@@ -1210,18 +978,18 @@ clangd-12: Unknown command line argument 'CMakeCXXCompilerId.cpp'.  Try: '/bin/c
 
 
 Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Checking whether the CXX compiler is IAR using "" terminated after 10 s due to timeout.Detecting C compiler ABI info failed to compile with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_f6ad4/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_3f987/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
 
 
 Determining if the C compiler works failed with the following output:
-Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_760f6/fast && CMake Error: Unknown argument -f
+Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_fc378/fast && CMake Error: Unknown argument -f
 CMake Error: Run 'cmake --help' for all supported options.
 
 
