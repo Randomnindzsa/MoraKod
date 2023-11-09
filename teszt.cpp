@@ -82,7 +82,6 @@ int main(){
                 nem_tort+= 1;
             }
             osszes+= 1;
-            cout << to_string(segment_eltort_bit) << " bit tort el     ";
         }
         eredmeny = (nem_tort*100)/osszes;
         cout << to_string(eredmeny) << "% lett jó a(z) " << to_string(osszes) << " esetből."<< endl;
