@@ -1,4 +1,4 @@
-/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_C_COMPILER=/bin/clangd-12 -DCMAKE_CXX_COMPILER=/bin/clangd-12 -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/balint/CLionProjects/iranyAZur
+/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_C_COMPILER=/bin/clangd-12 -DCMAKE_CXX_COMPILER=/bin/clangd-12 -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/balint/kisadam/MoraKod
 -- The C compiler identification is unknown
 -- The CXX compiler identification is unknown
 -- Detecting C compiler ABI info
@@ -14,9 +14,9 @@ CMake Error at /home/balint/cLION/clion-2021.2.2/bin/cmake/linux/share/cmake-3.2
 
   It fails with the following output:
 
-    Change Dir: /home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeTmp
+    Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
     
-    Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_760f6/fast && CMake Error: Unknown argument -f
+    Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_f0dc5/fast && CMake Error: Unknown argument -f
     CMake Error: Run 'cmake --help' for all supported options.
     
     
@@ -29,5 +29,5 @@ Call Stack (most recent call first):
 
 
 -- Configuring incomplete, errors occurred!
-See also "/home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeOutput.log".
-See also "/home/balint/CLionProjects/iranyAZur/cmake-build-debug/CMakeFiles/CMakeError.log".
+See also "/home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeError.log".
