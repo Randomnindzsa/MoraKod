@@ -24,7 +24,6 @@ std::bitset<256> toro(std::bitset<256> bemenet, unsigned meret, unsigned honnan)
         cerr << "Túl nagy a honnan!";
         return bemenet;
     }
-    segment_eltort_bit = 0;
     int lepes = 20/meret;
     int esely = 30;
     for (unsigned int i = 0; i < meret*2+1; ++i) {
@@ -71,7 +70,7 @@ int main(){
         unsigned nem_tort = 0;
         unsigned osszes = 0;
         float eredmeny = .0f;
-        cout << to_string(i*2+1) << " méretű parabola zaj mintázása: " << endl;
+        float toresi_esely = .0f;
         for (itr = seglist.begin(); itr < seglist.end(); itr++) {
             std::bitset<144> bevitel(*itr);
             std::bitset<256> forditott = k.hamming(bevitel);
@@ -83,8 +82,12 @@ int main(){
             }
             osszes+= 1;
         }
-        eredmeny = (nem_tort*100)/osszes;
+        cout << to_string(i*2+1) << " méretű parabola zaj mintázása esetén: " << endl;
+        eredmeny =  (nem_tort*100)/osszes;
+        cout << to_string(nem_tort) << "lett jó" << endl;
         cout << to_string(eredmeny) << "% lett jó a(z) " << to_string(osszes) << " esetből."<< endl;
+        cout << to_string(segment_eltort_bit) << "bit tort el a(z) " << to_string(osszes*144) << " bitből."<< endl;
+        segment_eltort_bit = 0;
     }
     return 0;
 }
