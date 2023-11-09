@@ -16,7 +16,7 @@ CMake Error at /home/balint/cLION/clion-2021.2.2/bin/cmake/linux/share/cmake-3.2
 
     Change Dir: /home/balint/kisadam/MoraKod/cmake-build-debug/CMakeFiles/CMakeTmp
     
-    Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_fc378/fast && CMake Error: Unknown argument -f
+    Run Build Command(s):/home/balint/cLION/clion-2021.2.2/bin/cmake/linux/bin/cmake -f Makefile cmTC_f0dc5/fast && CMake Error: Unknown argument -f
     CMake Error: Run 'cmake --help' for all supported options.
     
     

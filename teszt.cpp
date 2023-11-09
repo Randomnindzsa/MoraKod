@@ -3,14 +3,15 @@
 //
 
 #include "kodolo.h"
-#include <random>
+#include <cstdlib>
+#include <vector>
 #include <sstream>
+#include <fstream>
 
+unsigned segment_eltort_bit = 0;
 
 bool torik_e(unsigned esely){
-    std::default_random_engine generator;
-    std::uniform_int_distribution<unsigned> distribution(1, 100);
-    unsigned torik = distribution(generator);  // generates number in the range 1..6
+    unsigned torik = 1 + (std::rand() % 101);
     if(torik < esely){
         return true;
     }else{
@@ -23,26 +24,26 @@ std::bitset<256> toro(std::bitset<256> bemenet, unsigned meret, unsigned honnan)
         cerr << "Túl nagy a honnan!";
         return bemenet;
     }
-    int lepes = 50/meret;
-    int esely = 50;
+    segment_eltort_bit = 0;
+    int lepes = 20/meret;
+    int esely = 30;
     for (unsigned int i = 0; i < meret*2+1; ++i) {
-        cout << to_string(esely) << endl;
-        if(i==0){
-          bemenet.flip(honnan);
-          esely+=lepes;
-        }else if (i < meret){
+        if (i < meret){
             if(torik_e(esely)){
                 bemenet.flip(honnan+i);
+                segment_eltort_bit++;
             }
             esely+=lepes;
         }else if(i == meret){
             if(torik_e(esely)){
-                bemenet.flip(honnan+1);
+                bemenet.flip(honnan+i);
+                segment_eltort_bit++;
             }
             esely-=lepes;
         }else if(i > meret){
             if(torik_e(esely)){
                 bemenet.flip(honnan+i);
+                segment_eltort_bit++;
             }
             esely-=lepes;
         }
@@ -50,29 +51,41 @@ std::bitset<256> toro(std::bitset<256> bemenet, unsigned meret, unsigned honnan)
     return bemenet;
 }
 
-int main(int argc, char* argv[]){
-    std::stringstream bevevitel("001010101000001101111000111101011100111010101000000010110010001110101010001101111000000010000100011000110000001000010000101010100110100110111010\n001010101000001101111000111101011100111010101000000010110010001110101010001101111000000010000100011000110000001000010000101010100110100110111011");
+int main(){
+    fstream newfile;
+    std::string bevitel;
+    std::stringstream bevevitel(bevitel);
     std::string segment;
     std::vector<std::string> seglist;
     vector<std::string>::iterator itr;
     Kodolo k;
-
-    while(std::getline(bevevitel, segment, '\n'))
-    {
-        seglist.push_back(segment);
+    newfile.open("bitek.txt",ios::in);
+    if (newfile.is_open()){
+        while(std::getline(newfile, segment, '\n')){
+            seglist.push_back(segment);
+        }
     }
-    for (int i = 1; i < 3; ++i) {
+
+
+    for (int i = 1; i < 20; ++i) {
+        unsigned nem_tort = 0;
+        unsigned osszes = 0;
+        float eredmeny = .0f;
         cout << to_string(i*2+1) << " méretű parabola zaj mintázása: " << endl;
         for (itr = seglist.begin(); itr < seglist.end(); itr++) {
             std::bitset<144> bevitel(*itr);
             std::bitset<256> forditott = k.hamming(bevitel);
             std::bitset<256> torot = toro(forditott, i, 7);
             std::bitset<144> kiadas = k.decode(torot);
-            cout << *itr << '\n' << kiadas << std::endl;
             bool jo_e = (bevitel == kiadas);
-            cout << jo_e << '\n';
+            if(jo_e){
+                nem_tort+= 1;
+            }
+            osszes+= 1;
+            cout << to_string(segment_eltort_bit) << " bit tort el     ";
         }
-
+        eredmeny = (nem_tort*100)/osszes;
+        cout << to_string(eredmeny) << "% lett jó a(z) " << to_string(osszes) << " esetből."<< endl;
     }
     return 0;
 }
