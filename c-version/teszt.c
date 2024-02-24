@@ -11,14 +11,7 @@ static unsigned segment_eltort_bit = 0;
 bool torik_e(unsigned esely)
 {
     unsigned torik = 1 + (rand() % 101);
-    if (torik < esely)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return torik < esely;
 }
 
 void toro(bitset(256) * data, unsigned meret, unsigned honnan)
@@ -64,7 +57,12 @@ int main()
     for (int i = 0; i < SEGLIST_LENGTH; i++)
     {
         char seg[SEGLIST_WIDTH + 1];
-        fscanf(f, "%s\n", seg);
+        int result = fscanf(f, "%s\n", seg);
+        if (result == EOF)
+        {
+            printf("A fájl váratlanul véget ért! Biztosan legalább %d soros?\n", SEGLIST_LENGTH);
+            return 1;
+        }
         bitset_list[i] = bitset_from_bitstring(seg);
         
     }
