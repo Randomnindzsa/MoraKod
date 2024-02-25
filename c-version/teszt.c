@@ -111,7 +111,6 @@ int main()
         bitset_free(bitset_list[i]);
     }
     free(bitset_list);
-    kodolo_free();
     fclose(f);
     return 0;
 }

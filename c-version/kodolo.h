@@ -30,6 +30,4 @@ void kodolo_encode_bytes(uint8_t* bytes_in, uint8_t* bytes_out);
  */
 void kodolo_decode_bytes(uint8_t* bytes_in, uint8_t* bytes_out);
 
-void kodolo_free();
-
 #endif // KODOLO_H

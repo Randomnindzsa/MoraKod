@@ -41,6 +41,9 @@ size_t bitset_size_in_bytes(bitset* b);
 bool bitset_eq(bitset* a, bitset* b);
 void bitset_reset(bitset* b);
 
+#ifdef PC_DEBUG
+void bitset_print_debug_info(bitset* b);
+#endif
 
 // Nice to have, but not necessary now:
 

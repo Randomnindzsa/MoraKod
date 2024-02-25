@@ -111,3 +111,14 @@ bool bitset_eq(bitset* a, bitset* b) {
 void bitset_reset(bitset* b) {
     memset(b->data, 0, bitset_size_in_bytes(b));
 }
+
+#ifdef PC_DEBUG
+void bitset_print_debug_info(bitset* b) {
+    printf("bitset size: %lu\n", b->size);
+    printf("{");
+    for (int i = 0; i < bitset_size_in_bytes(b); i++) {
+        printf("%d, ", b->data[i]);
+    }
+    printf("}\n");
+}
+#endif
